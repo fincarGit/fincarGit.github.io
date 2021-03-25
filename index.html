@@ -51,4 +51,19 @@ Here the name empty is just the name that I gave to this theme. You can name it 
 
 
     nmtui - a good tool to configure wifi
+
+    How to configure the touchpad or other device with xinput:
+
+    # figure out the device that you want to change:
+    xinput list
+
+    # list all the current settings:
+
+    xinput list "SynPS/2 Synaptics TouchPad"
+    # for example the scrolling distance
+    xinput set-prop "SynPS/2 Synaptics TouchPad" "Synaptics Scrolling Distance" 350 350
+
+    # the doc can be found here:
+
+    https://www.x.org/archive/X11R7.5/doc/man/man4/synaptics.4.html
 </html>

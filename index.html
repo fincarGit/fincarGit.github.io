@@ -66,4 +66,23 @@ Here the name empty is just the name that I gave to this theme. You can name it 
     # the doc can be found here:
 
     https://www.x.org/archive/X11R7.5/doc/man/man4/synaptics.4.html
+    ---
+    command history for mounting a usb stick and then formatting it to ntfs.
+
+    check if the name you want to assign in mount process is already taken:
+ 2825  ls /media
+    annicas_stick is not taken, so proceed in creating mount point on os.
+ 2826  sudo mkdir /media/annicas_stick
+    check how the device appears.
+ 2827  lsblk
+ 2830  df -h
+    mount the device under the name that was prepared.
+ 2832  sudo mount /dev/sdb1 /media/annicas_stick
+    make a validity check, that this is really the device you want to format, and that there is no data, that you want to keep:
+ 2835  df -H
+ 2836  ls /media/annicas_stick
+    Finally unmount the device again.
+ 2841  sudo umount /dev/sdb1
+    And trigger the file system formatting to ntfs. (This could take a while)
+ 2842  sudo mkfs.ntfs /dev/sdb1
 </html>

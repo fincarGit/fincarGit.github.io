@@ -68,7 +68,7 @@ Here the name empty is just the name that I gave to this theme. You can name it 
     https://www.x.org/archive/X11R7.5/doc/man/man4/synaptics.4.html
     ---
     command history for mounting a usb stick and then formatting it to ntfs.
-
+y
     check if the name you want to assign in mount process is already taken:
  2825  ls /media
     annicas_stick is not taken, so proceed in creating mount point on os.
@@ -85,4 +85,11 @@ Here the name empty is just the name that I gave to this theme. You can name it 
  2841  sudo umount /dev/sdb1
     And trigger the file system formatting to ntfs. (This could take a while)
  2842  sudo mkfs.ntfs /dev/sdb1
+
+
+nmcli radio wifi -- This shows if the wifi is enabled
+nmcli radio wifi on -- This enables wifi
+nmcli radio wifi off -- This disables wifi
+
+nmtui -- Finally for connecting probably the easiest to use is the nmtui tool.
 </html>

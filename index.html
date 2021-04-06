@@ -91,13 +91,16 @@ nmcli radio wifi on -- This enables wifi
 nmcli radio wifi off -- This disables wifi
 
 nmtui -- Finally for connecting probably the easiest to use is the nmtui tool.
-kubectl config get-contexts                          # display list of contexts 
-kubectl config current-context                       # display the current-context
-kubectl config use-context my-cluster-name           # set the default context to my-cluster-name
-kubectl get pods | grep myname                       # display pods with myname in its name
-kubectl get [pods/deployments/services/ingress/...]  # displays all resources of that kind and status information
-kubectl logs podname                                 # displays logs for pod
-kubectl logs deployment/deploymentname               # displays log for pods using the deployment
-kubectl logs -f ressourcename                        # displays and follows logs.
+<h1>kubectl commands</h1>
+<ul>
+	<li> kubectl config get-contexts                          # display list of contexts </li>
+  <li> kubectl config current-context                       # display the current-context </li>
+  <li> kubectl config use-context my-cluster-name           # set the default context to my-cluster-name </li>
+  <li> kubectl get pods | grep myname                       # display pods with myname in its name </li>
+  <li> kubectl get [pods/deployments/services/ingress/...]  # displays all resources of that kind and status information </li>
+  <li> kubectl logs podname                                 # displays logs for pod </li>
+  <li> kubectl logs deployment/deploymentname               # displays log for pods using the deployment </li>
+  <li> kubectl logs -f ressourcename                        # displays and follows logs. </li>
+</ul>
     </body>
 </html>

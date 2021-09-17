@@ -107,46 +107,44 @@ nmtui -- Finally for connecting probably the easiest to use is the nmtui tool.
     <li>setxkbmap -option caps:swapescape # when this is tested extensively I could add it to: .xinitrc file in home directory <\li>
         <li>synclient HorizTwoFingerScroll=1 </li>
 </ul>
+<ul>
+    <li>How to find running postgres instances on ubuntu:
 
-How to find running postgres instances on ubuntu:
+        pgrep -fa -- -D | grep postgres
+</li>
+<li>pg_lsclusters --- lists running clusters and the configured ports</li>
+<li>sudo pg_ctlcluster 12 main start ---- starts the cluster</li>
+<li>How to change the port of a postgres instance:
+</li>
+<li>1. find the instance you want to change the port for.
 
-pgrep -fa -- -D | grep postgres
+    pgrep -fa -- -D | grep posgtgres
+</li>
+    <li>The output also shows you the $PG_DATA folder:
+        here you can find the config file pg_hba.conf</li>
 
-pg_lsclusters --- lists running clusters and the configured ports
+    <i>2. Change the port setting here to the one you need.</i>
 
-sudo pg_ctlcluster 12 main start ---- starts the cluster
+    <i>3. Stop and start your service
 
-How to change the port of a postgres instance:
+        sudo pg_ctlcluster 12 main stop
+        sudo pg_ctlcluster 12 main start
 
-1. find the instance you want to change the port for.
-
-pgrep -fa -- -D | grep posgtgres
-
-The output also shows you the $PG_DATA folder:
-here you can find the config file pg_hba.conf
-
-2. Change the port setting here to the one you need.
-
-3. Stop and start your service
-
-sudo pg_ctlcluster 12 main stop
-sudo pg_ctlcluster 12 main start
-
-(the exact version and name you need can be gound with pg_lsclusters)
-
-
-How to change the postgres user password:
-1. Login via ident method:
-sudo -i -u postgres
-psql -p {the right portnumber here}
-
-2. Issue interactive password change:
-\password
-
-3. Complete the change.
-
-
-
-
+        (the exact version and name you need can be gound with pg_lsclusters)
+    </i>
+    <i>
+        How to change the postgres user password:
+        1. Login via ident method:
+        sudo -i -u postgres
+        psql -p {the right portnumber here}
+    </i>
+    <i>
+        2. Issue interactive password change:
+        \password
+    </i>
+    <i>
+        3. Complete the change.
+    </i>
+</ul>
     </body>
 </html>
